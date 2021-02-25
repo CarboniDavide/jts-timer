@@ -1,4 +1,4 @@
-# Timer
+# JTS Timer
 
 Simple JS timer
 
