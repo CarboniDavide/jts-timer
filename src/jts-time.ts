@@ -1,6 +1,6 @@
 export class Time {
     public duration: number = 0;
-    public day: number = 0;
+    public days: number = 0;
     public hours: number = 0;
     public minutes: number = 0;
     public seconds: number = 0;
@@ -11,7 +11,7 @@ export class Time {
     constructor(startTime: number = 0, currentTime: number = 0){
       this.duration = currentTime -  startTime;
       let adjTime = this.duration < 0 ? 1 : 0;
-      this.day = Math.floor(this.duration / (86400000)) + adjTime;
+      this.days = Math.floor(this.duration / (86400000)) + adjTime;
       this.hours = Math.floor((this.duration % (86400000)) / (3600000)) + adjTime;
       this.minutes = Math.floor((this.duration % (3600000)) / (60000)) + adjTime;
       this.seconds = Math.floor((this.duration % (60000)) / 1000);

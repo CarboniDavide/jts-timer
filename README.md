@@ -11,9 +11,9 @@ Simple JS timer
 
 ## Properties
 
-- `time: Time` - Contains the elapsed time expressed in **day, hours, minutes, seconds, milliseconds**. Values are:
+- `time: Time` - Contains the elapsed time expressed in **days, hours, minutes, seconds, milliseconds**. Values are:
   - duration: number. default `0`.
-  - day: number. default `0`.
+  - days: number. default `0`.
   - hours: number. default `0`.
   - minutes: number. default `0`.
   - seconds: number. default `0`.
