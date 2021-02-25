@@ -21,7 +21,7 @@ Simple JS timer
   - startTime: number. default `0`.
   - currentTime: number. default `0`.
 - `interval: number` - Refresh interval in milliseconds: Default value: `1000`.
-- `state: TimerState` - Current timer state: values are: ** Run, Stop, Pause, Clear, Undefined **. Default: `Undefined`.
+- `state: TimerState` - Current timer state: values are: **Run, Stop, Pause, Clear** and **Undefined**. Default: `Undefined`.
 - `countdown: number` - Initial timer value in seconds. Default value: `0`.
 
 ## Events
