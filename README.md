@@ -37,18 +37,27 @@ In your code import timer as:
 
 ```typescript
 import { Timer, Time, TimerState } from 'jts-timer';
+```
 
-...
+Create a new timer using:
 
+```typescript
+let timer: Timer;
+
+timer = new Timer();
+timer.interval = 1000;
+timer.start();
+timer.onClock = () => console.log(timer.time.seconds);
+```
+
+or you can define timer interval directly when instantiating class:
+
+```typescript
 let timer: Timer;
 
 timer = new Timer(1000);
 timer.start();
 timer.onClock = () => console.log(timer.time.seconds);
-
-....
-
-
 ```
 
 # License
