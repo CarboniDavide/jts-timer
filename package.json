@@ -1,7 +1,7 @@
 {
   "name": "jts-timer",
   "version": "1.0.0",
-  "description": "A simple JS timer",
+  "description": "A simple JS/TS timer",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarboniDavide/timer.git"
+    "url": "git+https://github.com/CarboniDavide/jts-timer.git"
   },
   "keywords": [
     "javascript",
@@ -24,7 +24,7 @@
   "author": "Davide Carboni",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CarboniDavide/timer/issues"
+    "url": "https://github.com/CarboniDavide/jts-timer/issues"
   },
-  "homepage": "https://github.com/CarboniDavide/timer#readme"
+  "homepage": "https://github.com/CarboniDavide/jts-timer#readme"
 }
