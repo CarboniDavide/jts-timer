@@ -1,0 +1,30 @@
+{
+  "name": "jts-timer",
+  "version": "1.0.0",
+  "description": "A simple JS timer",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "publishPackage": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarboniDavide/timer.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "timer",
+    "clock"
+  ],
+  "author": "Davide Carboni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarboniDavide/timer/issues"
+  },
+  "homepage": "https://github.com/CarboniDavide/timer#readme"
+}
