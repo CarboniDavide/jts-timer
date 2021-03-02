@@ -46,8 +46,8 @@ let timer: Timer;
 
 timer = new Timer();
 timer.interval = 1000;
-timer.start();
 timer.onClock = () => console.log(timer.time.seconds);
+timer.start();
 ```
 
 or you can define timer interval directly when instantiating class:
@@ -56,8 +56,8 @@ or you can define timer interval directly when instantiating class:
 let timer: Timer;
 
 timer = new Timer(1000);
-timer.start();
 timer.onClock = () => console.log(timer.time.seconds);
+timer.start();
 ```
 
 # License
