@@ -3,5 +3,6 @@ export enum TimerState {
     Stop,
     Pause,
     Clear,
-    Undefined
+    Undefined,
+    Suspend
   }

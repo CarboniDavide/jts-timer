@@ -62,6 +62,10 @@ export class Timer {
   public get onClear(): Function | null { return this._onClear; }
   public set onClear(value: Function | null) { this._onClear = (value == null) ? () => {} : value; }
 
+  private _onSuspend?: Function = () => {};
+  public get onSuspend(): Function | null { return this._onSuspend; }
+  public set onSuspend(value: Function | null) { this._onSuspend = (value == null) ? () => {} : value; }
+
   // Methods ----------------------------------------------------------
 
   private _onTick(){
@@ -91,6 +95,7 @@ export class Timer {
     if (this.state == TimerState.Run){ return; }
     this._startTime = (this._state == TimerState.Pause) ? this._startTime : this._getStart(); 
     this._currentTime = (this._state == TimerState.Pause) ? this._currentTime : this._startTime;
+    if (this._state == TimerState.Suspend) { this._startTime = this._startTime + this._currentTime; }
     this._state = TimerState.Run;
     this._onStart();
     this._next();
@@ -101,6 +106,14 @@ export class Timer {
     if (this._state != TimerState.Run){ return; }
     this._state = TimerState.Pause;
     this._onPause();
+    this._next();
+    this._clearTimer();
+  }
+
+  public suspend() { 
+    if (this.state == TimerState.Suspend){ return; }
+    this._state = TimerState.Suspend;
+    this._onSuspend();
     this._next();
     this._clearTimer();
   }
