@@ -94,8 +94,8 @@ export class Timer {
   public start() {
     if (this.state == TimerState.Run){ return; }
     this._startTime = (this._state == TimerState.Pause) ? this._startTime : this._getStart(); 
+    this._startTime = (this._state == TimerState.Suspend) ? new Date().getTime() - this._time.duration : this._startTime;
     this._currentTime = (this._state == TimerState.Pause) ? this._currentTime : this._startTime;
-    if (this._state == TimerState.Suspend) { this._startTime = this._startTime + this._currentTime; }
     this._state = TimerState.Run;
     this._onStart();
     this._next();
